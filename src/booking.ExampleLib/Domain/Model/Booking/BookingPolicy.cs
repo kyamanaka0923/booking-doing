@@ -7,7 +7,7 @@ namespace booking.ExampleLib.Domain.Model.booking
     {
         Percent _Percent;
 
-        BookingPolicy(Percent percent)
+        public BookingPolicy(Percent percent)
         {
             _Percent = percent;
         }

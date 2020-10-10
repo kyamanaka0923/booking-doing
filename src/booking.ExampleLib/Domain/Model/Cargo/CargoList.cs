@@ -33,7 +33,8 @@ namespace booking.ExampleLib.Domain.Model.Cargo
         }
 
         public static CargoList Empty {get{
-            return new CargoList(new List<Cargo>());
-        }}
+                return new CargoList(new List<Cargo>());
+        }
+        }
     }
 }

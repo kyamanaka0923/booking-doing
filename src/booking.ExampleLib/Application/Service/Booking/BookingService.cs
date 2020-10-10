@@ -6,13 +6,10 @@ namespace Booking.ExampleLib.Application.Service.BookingService
     public class BookingService
     {
         // 予約可能か確認する
-        booking.ExampleLib.Domain.Model.booking.Booking CanBook(Voyage voyage, Cargo cargo)
-        {
-            return voyage.CanBook(cargo);
-        }
+        public booking.ExampleLib.Domain.Model.booking.Booking CanBook(Voyage voyage, Cargo cargo) => voyage.CanBook(cargo);
 
         // 予約を記録して、予約番号を返す
-        BookingNumber Booking(Voyage voyage, Cargo cargo)
+        public BookingNumber Booking(Voyage voyage, Cargo cargo)
         {
             return BookingNumber.Generate();
         }

@@ -15,5 +15,10 @@ namespace booking.ExampleLib.Domain.Model.Cargo
         {
             return _Size.IsLarger(other);
         }
+
+        public override string ToString()
+        {
+            return "Cargo{" + "size=" + _Size + "}";
+        }
     }
 }
