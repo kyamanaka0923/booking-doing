@@ -39,6 +39,6 @@ namespace booking.ExampleLib.Domain.Model.Voyage
             return booking.Booking.できる;
         }
 
-        public static Voyage create(Size capacity, BookingPolicy bookingPolicy) => new Voyage(capacity, bookingPolicy, CargoList.Empty);
+        public static Voyage Create(Size capacity, BookingPolicy bookingPolicy) => new Voyage(capacity, bookingPolicy, CargoList.Empty);
     }
 }

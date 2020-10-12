@@ -6,6 +6,7 @@ namespace booking.ExampleLib.Domain.Model.Cargo
     {
         private Size _Size;
         public Size Size {get {return _Size;}}
+
         public Cargo(Size size)
         {
             _Size = size;

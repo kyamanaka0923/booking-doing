@@ -16,7 +16,7 @@ namespace Booking.ExampleLib.Application.Service.BookingService.Tests
         [TestMethod()]
         public void OverBooking_できる()
         {
-            var initial = Voyage.create(new Size(100), new BookingPolicy(new Percent(10)));
+            var initial = Voyage.Create(new Size(100), new BookingPolicy(new Percent(10)));
             var bookedCargo = new Cargo(new Size(90));
             var voyage = initial.AddCargo(bookedCargo);
             var toBookCargo = new Cargo(new Size(10));
@@ -28,7 +28,7 @@ namespace Booking.ExampleLib.Application.Service.BookingService.Tests
         [TestMethod()]
         public void OverBooking_できない()
         {
-            var initial = Voyage.create(new Size(100), new BookingPolicy(new Percent(10)));
+            var initial = Voyage.Create(new Size(100), new BookingPolicy(new Percent(10)));
             var bookedCargo = new Cargo(new Size(100));
             var voyage = initial.AddCargo(bookedCargo);
             var toBookCargo = new Cargo(new Size(10));

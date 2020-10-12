@@ -1,4 +1,6 @@
 
+using System.Runtime.CompilerServices;
+
 namespace booking.ExampleLib.Domain.Model.Type
 {
     public class Size
@@ -36,5 +38,16 @@ namespace booking.ExampleLib.Domain.Model.Type
         {
             return _Size > size.Value;
         }
+
+        public static Size Of(int value)
+        {
+            if (value < 0)
+            {
+                throw new System.ArgumentException();
+            }
+            return new Size(value);
+        }
+
+        public static Size Zero => Of(0);
     }
 }
